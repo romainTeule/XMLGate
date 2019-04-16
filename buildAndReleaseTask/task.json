@@ -1,0 +1,54 @@
+{
+    "id": "bbc38e7f-e168-4503-b676-3ae4e676f649",
+    "name": "xmlGate",
+    "friendlyName": "XMLGate",
+    "description": "Check XML files tags against defined value, fail build if not correct",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Romain Teulé",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Checking  files in $(SourceFolder) for $(Tag) tag value ( should be $(TagValue))",
+    "inputs": [
+        {
+            "name": "SourceFolder",
+            "type": "filePath",
+            "label": "Source Folder",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The source folder that the task will check xml file in"
+        },
+        {
+            "name": "Filters",
+            "type": "multiLine",
+            "label": "Contents",
+            "defaultValue": "*.xml",
+            "required": true,
+            "helpMarkDown": "Filters to restrict files that will be checked. "
+        },
+        {
+            "name": "Tag",
+            "type": "string",
+            "label": "Tag to check",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Tag to check in each document. Separate nodes with '.' . Exemple : Root.Parent.Child.ActualTag"
+        },
+        {
+            "name": "TagValue",
+            "type": "string",
+            "label": "Value to check for",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Value the tag should have. If empty, the task simply check that the tag has a value."
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "xmlCheck.js"
+        }
+    }
+}
