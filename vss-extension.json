@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "xmlGate",
+    "name": "XMLGate",
+    "version": "0.0.1",
+    "publisher": "RomainTeuleBASF",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tools for checking an attribute value for filtered xml files in a folder.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/xml.png"        
+    },
+    "files": [
+        {
+            "path": "buildAndReleaseTask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "xmlGate",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildAndReleaseTask"
+            }
+        }
+    ]
+}

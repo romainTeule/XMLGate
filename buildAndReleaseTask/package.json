@@ -1,0 +1,20 @@
+{
+  "name": "xmlgate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romain Teulé",
+  "license": "ISC",
+  "dependencies": {
+    "@types/xml2js": "^0.4.4",
+    "azure-pipelines-task-lib": "^2.8.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.4",
+    "@types/q": "^1.5.2"
+  }
+}
