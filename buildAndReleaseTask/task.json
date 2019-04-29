@@ -38,7 +38,7 @@
             "helpMarkDown": "Tag to check in each document. Separate nodes with '.' . Exemple : Root.Parent.Child.ActualTag"
         },
         {
-            "name": "TagValue",
+            "name": "Value",
             "type": "string",
             "label": "Value to check for",
             "defaultValue": "",
